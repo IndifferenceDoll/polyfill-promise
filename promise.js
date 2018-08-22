@@ -51,7 +51,7 @@ func().then(res=>{
 //.then中执行异步会出问题，不能做到像原生promise一样的表现，依然按顺序执行，只是拿不到return，
 //而是用undefined代替，因为无法模拟微任务的执行时机，所以.then里的函数添加不到微任务的队列里，
 //所以结果意外，无法模拟模拟原生promise，可以试试在node的环境下用 process.nextTick把它推到微任务里面
-
+//似乎加上return返回值的表现是一致的
 
 //原生promise表现
 // function fun(){
